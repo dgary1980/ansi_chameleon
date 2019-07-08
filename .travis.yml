@@ -4,7 +4,7 @@ dist: trusty
 language: python
 python:
   - "3.6"
-# install pg_chameleon
+# install ansi_chameleon
 install: "pip install ."
 
 services:

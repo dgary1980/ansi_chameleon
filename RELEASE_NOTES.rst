@@ -21,7 +21,7 @@ As this change requires a replica catalogue upgrade is very important to follow 
 * If working via ssh is suggested to use screen or tmux for the upgrade
 * Stop all the replica processes with ``chameleon stop_all_replicas --config <your_config>`` 
 * Take a backup of the schema ``sch_chameleon`` with pg_dump for good measure.
-* Install the upgrade with ``pip install pg_chameleon --upgrade``
+* Install the upgrade with ``pip install ansi_chameleon --upgrade``
 * Check if the version is upgraded with ``chameleon --version`` 
 * Upgrade  the replica schema with the command ``chameleon upgrade_replica_schema --config <your_config>``
 * Start all the replicas.
@@ -29,7 +29,7 @@ As this change requires a replica catalogue upgrade is very important to follow 
 
 If the upgrade procedure refuses to upgrade the catalogue because of running or errored replicas is possible to reset the statuses using the command ``chameleon enable_replica --source <source_name>``.
 
-If the catalogue upgrade is still  not possible downgrading pgchameleon to the previous version. E.g. ``pip install pg_chameleon==2.0.9`` will make the replica startable again.
+If the catalogue upgrade is still  not possible downgrading pgchameleon to the previous version. E.g. ``pip install ansi_chameleon==2.0.9`` will make the replica startable again.
 
 
 
@@ -52,7 +52,7 @@ As this change requires a replica catalogue upgrade is very important to follow 
 * If working via ssh is suggested to use screen or tmux for the upgrade
 * Stop all the replica processes with ``chameleon stop_all_replicas --config <your_config>`` 
 * Take a backup of the schema ``sch_chameleon`` with pg_dump for good measure.
-* Install the upgrade with ``pip install pg_chameleon --upgrade``
+* Install the upgrade with ``pip install ansi_chameleon --upgrade``
 * Check if the version is upgraded with ``chameleon --version`` 
 * Upgrade  the replica schema with the command ``chameleon upgrade_replica_schema --config <your_config>``
 * Start all the replicas.
@@ -60,7 +60,7 @@ As this change requires a replica catalogue upgrade is very important to follow 
 
 If the upgrade procedure refuses to upgrade the catalogue because of running or errored replicas is possible to reset the statuses using the command ``chameleon enable_replica --source <source_name>``.
 
-If the catalogue upgrade is still  not possible downgrading pgchameleon to the previous version. E.g. ``pip install pg_chameleon==2.0.8`` will make the replica startable again.
+If the catalogue upgrade is still  not possible downgrading pgchameleon to the previous version. E.g. ``pip install ansi_chameleon==2.0.8`` will make the replica startable again.
 
 
 2.0.8
@@ -85,8 +85,8 @@ The example snippet disables the inserts on the table ``delphis_mediterranea.foo
 The release 2.0.8 adds the  **EXPERIMENTAL** support for the GTID for MySQL or Percona server. The GTID in MariaDb is currently not supported.
 A new optional parameter ``gtid_enable:`` which defaults to ``No`` is available for the source type mysql.
 
-When `MySQL is configured with the GTID <https://dev.mysql.com/doc/refman/8.0/en/replication-gtids-concepts.html>`_ and the parameter ``gtid_enable:`` is set to Yes,  pg_chameleon will use the GTID to auto position the replica stream.
-This allows pg_chameleon to reconfigure the source within the MySQL replicas without the need to run init_replica. 
+When `MySQL is configured with the GTID <https://dev.mysql.com/doc/refman/8.0/en/replication-gtids-concepts.html>`_ and the parameter ``gtid_enable:`` is set to Yes,  ansi_chameleon will use the GTID to auto position the replica stream.
+This allows ansi_chameleon to reconfigure the source within the MySQL replicas without the need to run init_replica. 
 
 This feature has been extensively tested but as it's new has to be considered  **EXPERIMENTAL**. 
 
@@ -104,7 +104,7 @@ As this change requires a replica catalogue upgrade is very important to follow 
 * If working via ssh is suggested to use screen or tmux for the upgrade
 * Stop all the replica processes with ``chameleon stop_all_replicas --config <your_config>`` 
 * Take a backup of the schema ``sch_chameleon`` with pg_dump for good measure.
-* Install the upgrade with ``pip install pg_chameleon --upgrade``
+* Install the upgrade with ``pip install ansi_chameleon --upgrade``
 * Check if the version is upgraded with ``chameleon --version`` 
 * Upgrade  the replica schema with the command ``chameleon upgrade_replica_schema --config <your_config>``
 * Start all the replicas.
@@ -112,7 +112,7 @@ As this change requires a replica catalogue upgrade is very important to follow 
 
 If the upgrade procedure refuses to upgrade the catalogue because of running or errored replicas is possible to reset the statuses using the command ``chameleon enable_replica --source <source_name>``.
 
-If the catalogue upgrade is still  not possible downgrading pgchameleon to the previous version. E.g. ``pip install pg_chameleon==2.0.7`` will make the replica startable again.
+If the catalogue upgrade is still  not possible downgrading pgchameleon to the previous version. E.g. ``pip install ansi_chameleon==2.0.7`` will make the replica startable again.
 
 
 2.0.7
@@ -121,7 +121,7 @@ This maintenance release makes the multiprocess logging safe. Now each replica p
 
 The ``--full`` option now is working. Previously the option had no effect causing the maintenance to run always a conventional vacuum.
 
-This release fixes the issues reported  in ticket #73 and #75 by pg_chameleon's users.
+This release fixes the issues reported  in ticket #73 and #75 by ansi_chameleon's users.
 
 The bug reported in ticket #73 caused a wrong data type tokenisation when an alter table adds a column with options (e.g. ``ADD COLUMN foo DEFAULT NULL``)
 
@@ -157,14 +157,14 @@ This simplifies the upgrade procedure in case of errored or wrongly running repl
 As this change requires a replica catalogue upgrade is very important to follow the upgrade instructions provided below.
 
 * If working via ssh is suggested to open a screen session 
-* Before upgrading pg_chameleon **stop all the replica processes.**
-* Upgrade the pg_chameleon package with `pip install pg_chameleon --upgrade`
+* Before upgrading ansi_chameleon **stop all the replica processes.**
+* Upgrade the ansi_chameleon package with `pip install ansi_chameleon --upgrade`
 * Upgrade  the replica schema with the command `chameleon upgrade_replica_schema --config <your_config>`
 * Start the replica processes
 
 If the upgrade procedure refuses to upgrade the catalogue because of running or errored replicas is possible to reset the statuses with the ``enable_replica`` command.
 
-If the catalogue upgrade is still  not possible downgrading pgchameleon to the version 2.0.5 with ``pip install pg_chameleon==2.0.5`` should make the replicas startable again.
+If the catalogue upgrade is still  not possible downgrading pgchameleon to the version 2.0.5 with ``pip install ansi_chameleon==2.0.5`` should make the replicas startable again.
 
 2.0.5
 --------------------------
@@ -193,7 +193,7 @@ As this change requires a replica catalogue upgrade is very important to follow 
 
 * If working via ssh is suggested to open a screen session 
 * Before the upgrade stop all the replica processes.
-* Upgrade pg_chameleon with `pip install pg_chameleon --upgrade`
+* Upgrade ansi_chameleon with `pip install ansi_chameleon --upgrade`
 * Run the upgrade command `chameleon upgrade_replica_schema --config <your_config>`
 * Start the replica processes
 
@@ -222,7 +222,7 @@ As this change requires a replica catalogue upgrade is very important to follow 
 
 * If working via ssh is suggested to open a screen session 
 * Before the upgrade stop all the replica processes.
-* Upgrade pg_chameleon with `pip install pg_chameleon --upgrade`
+* Upgrade ansi_chameleon with `pip install ansi_chameleon --upgrade`
 * Run the upgrade command `chameleon upgrade_replica_schema --config <your_config>`
 * Start the replica processes
 
@@ -264,7 +264,7 @@ procedure performed the final cleanup.
 
 2.0.1
 --------------------------
-The first maintenance release of pg_chameleon v2 adds a performance improvement in the read replica process when 
+The first maintenance release of ansi_chameleon v2 adds a performance improvement in the read replica process when 
 the variables limit_tables or skip_tables are set.
 
 Previously all the rows were read from the replica stream as the ``BinLogStreamReader`` do not allow the usage of  the tables in the form of

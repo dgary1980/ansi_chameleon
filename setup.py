@@ -11,15 +11,15 @@ def readme():
 
 python_lib=get_python_lib()
 
-package_data = ('%s/pg_chameleon' % python_lib, ['LICENSE.txt'])
+package_data = ('%s/ansi_chameleon' % python_lib, ['LICENSE.txt'])
 
-	
+
 
 sql_up_path = 'sql/upgrade'
-conf_dir = "/%s/pg_chameleon/configuration" % python_lib
-conn_dir = "/%s/pg_chameleon/connection" % python_lib
-sql_dir = "/%s/pg_chameleon/sql" % python_lib
-sql_up_dir = "/%s/pg_chameleon/%s" % (python_lib, sql_up_path)
+conf_dir = "/%s/ansi_chameleon/configuration" % python_lib
+conn_dir = "/%s/ansi_chameleon/connection" % python_lib
+sql_dir = "/%s/ansi_chameleon/sql" % python_lib
+sql_up_dir = "/%s/ansi_chameleon/%s" % (python_lib, sql_up_path)
 
 
 data_files = []
@@ -38,15 +38,15 @@ data_files.append(sql_up_files)
 
 
 setup(
-	name="pg_chameleon",
-	version="2.0.10",
-	description="MySQL to PostgreSQL replica and migration",
+	name="ansi_chameleon",
+	version="0.1.0",
+	description="MySQL to ANSI SQL replica and migration",
 	long_description=readme(),
-	author = "Federico Campoli",
-	author_email = "the4thdoctor.gallifrey@gmail.com",
-	maintainer = "Federico Campoli", 
-	maintainer_email = "the4thdoctor.gallifrey@gmail.com",
-	url="https://github.com/the4thdoctor/pg_chameleon/",
+	author = "Daniel Gary",
+	author_email = "dgary1980@gmail.com",
+	maintainer = "Daniel Gary",
+	maintainer_email = "dgary1980@gmail.com",
+	url="https://github.com/dgary1980/ansi_chameleon/",
 	license="BSD License",
 	platforms=[
 		"linux"
@@ -70,29 +70,29 @@ setup(
 		"Topic :: Other/Nonlisted Topic"
 	],
 	py_modules=[
-		"pg_chameleon.__init__",
-		"pg_chameleon.lib.global_lib",
-		"pg_chameleon.lib.mysql_lib",
-		"pg_chameleon.lib.pg_lib",
-		"pg_chameleon.lib.sql_util"
+		"ansi_chameleon.__init__",
+		"ansi_chameleon.lib.global_lib",
+		"ansi_chameleon.lib.mysql_lib",
+		"ansi_chameleon.lib.pg_lib",
+		"ansi_chameleon.lib.sql_util"
 	],
 	scripts=[
-		"scripts/chameleon.py", 
+		"scripts/chameleon.py",
 		"scripts/chameleon"
 	],
 	install_requires=[
-		'PyMySQL>=0.7.11', 
-		'argparse>=1.2.1', 
-		'mysql-replication>=0.15', 
-		'psycopg2-binary>=2.7.4', 
-		'PyYAML>=3.12', 
-		'tabulate>=0.8.1', 
-		'daemonize>=2.4.7', 
+		'PyMySQL>=0.7.11',
+		'argparse>=1.2.1',
+		'mysql-replication>=0.15',
+		'psycopg2-binary>=2.7.4',
+		'PyYAML>=3.12',
+		'tabulate>=0.8.1',
+		'daemonize>=2.4.7',
 		'rollbar>=0.13.17'
 	],
-	data_files = data_files, 
-	include_package_data = True, 
+	data_files = data_files,
+	include_package_data = True,
 	python_requires='>=3.3',
-	keywords='postgresql mysql replica migration database',
-	
+	keywords='mysql replica migration database',
+
 )

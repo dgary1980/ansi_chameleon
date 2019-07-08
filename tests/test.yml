@@ -1,7 +1,7 @@
 ---
 # global settings
-pid_dir: '~/.pg_chameleon/pid/'
-log_dir: '~/.pg_chameleon/logs/'
+pid_dir: '~/.ansi_chameleon/pid/'
+log_dir: '~/.ansi_chameleon/logs/'
 log_dest: file
 log_level: info
 log_days_keep: 10

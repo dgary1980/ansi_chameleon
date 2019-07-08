@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# pg_chameleon documentation build configuration file, created by
+# ansi_chameleon documentation build configuration file, created by
 # sphinx-quickstart on Sun Oct  9 17:08:30 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -21,8 +21,8 @@ import sys
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('..'))
-sys.path.insert(0, os.path.abspath('../pg_chameleon'))
-sys.path.insert(0, os.path.abspath('../pg_chameleon/lib'))
+sys.path.insert(0, os.path.abspath('../ansi_chameleon'))
+sys.path.insert(0, os.path.abspath('../ansi_chameleon/lib'))
 
 # -- General configuration ------------------------------------------------
 
@@ -56,7 +56,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'pg_chameleon'
+project = u'ansi_chameleon'
 copyright = u'2016-2018 Federico Campoli'
 author = u'Federico Campoli'
 
@@ -141,7 +141,7 @@ html_theme = 'classic'
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-# html_title = u'pg_chameleon v0.1 DEVEL'
+# html_title = u'ansi_chameleon v0.1 DEVEL'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
@@ -241,7 +241,7 @@ html_static_path = ['_static']
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'pg_chameleondoc'
+htmlhelp_basename = 'ansi_chameleondoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -267,7 +267,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'pg_chameleon.tex', u'pg\\_chameleon Documentation',
+    (master_doc, 'ansi_chameleon.tex', u'pg\\_chameleon Documentation',
      u'Federico Campoli', 'manual'),
 ]
 
@@ -309,7 +309,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'pg_chameleon', u'pg_chameleon Documentation',
+    (master_doc, 'ansi_chameleon', u'ansi_chameleon Documentation',
      [author], 1)
 ]
 
@@ -324,8 +324,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'pg_chameleon', u'pg_chameleon Documentation',
-     author, 'pg_chameleon', 'MySQL to PostgreSQL replica',
+    (master_doc, 'ansi_chameleon', u'ansi_chameleon Documentation',
+     author, 'ansi_chameleon', 'MySQL to PostgreSQL replica',
      'Database'),
 ]
 

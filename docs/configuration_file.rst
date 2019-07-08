@@ -1,7 +1,7 @@
 The configuration file
 ********************************
 
-The file config-example.yaml is stored in **~/.pg_chameleon/configuration** and should be used as template for the other configuration files. 
+The file config-example.yaml is stored in **~/.ansi_chameleon/configuration** and should be used as template for the other configuration files. 
 The configuration consists of three configuration groups.
 
 Global settings
@@ -157,7 +157,7 @@ Skip events configuration
    :linenos:
 
 
-The ``skip_events`` variable allows to tell pg_chameleon to skip events for tables or entire schemas.
+The ``skip_events`` variable allows to tell ansi_chameleon to skip events for tables or entire schemas.
 The example provided with configuration-example.ym disables the inserts on the table ``delphis_mediterranea.foo`` and disables the deletes on the entire schema ``delphis_mediterranea``.
 
 
@@ -166,7 +166,7 @@ The example provided with configuration-example.ym disables the inserts on the t
 PostgreSQL source type (EXPERIMENTAL)
 ================================================================
 
-pg_chameleon 2.0 have an experimental support for the postgresql source type. 
+ansi_chameleon 2.0 have an experimental support for the postgresql source type. 
 When set to ``pgsql`` the system expects a postgresql source database rather a mysql. 
 The following limitations apply.
 

@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.92.1 r"
    sodipodi:docname="pgchameleon.svg"
-   inkscape:export-filename="/home/thedoctor/git/pg_chameleon/images/pgchameleon.png"
+   inkscape:export-filename="/home/thedoctor/git/ansi_chameleon/images/pgchameleon.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -26988,13 +26988,13 @@
          style="font-size:42.66666794px;line-height:1.25;font-family:sans-serif;stroke-width:1.06666672"> </flowPara></flowRoot>    <g
        id="g18922"
        transform="translate(-10.606602,-2.1862966)"
-       inkscape:export-filename="/home/tw.com/federico.campoli/Documents/git/pg_chameleon/images/logo.png"
+       inkscape:export-filename="/home/tw.com/federico.campoli/Documents/git/ansi_chameleon/images/logo.png"
        inkscape:export-xdpi="80"
        inkscape:export-ydpi="80">
       <g
          id="g9721"
          transform="matrix(0.4280224,0,0,0.4280224,126.65957,115.12041)"
-         inkscape:export-filename="/home/tw.com/federico.campoli/Documents/git/pg_chameleon/images/logo.png"
+         inkscape:export-filename="/home/tw.com/federico.campoli/Documents/git/ansi_chameleon/images/logo.png"
          inkscape:export-xdpi="73.784042"
          inkscape:export-ydpi="73.784042">
         <path
@@ -29743,7 +29743,7 @@
            y="501.84247"
            x="243.89174"
            id="tspan18108"
-           sodipodi:role="line">pg_chameleon</tspan><tspan
+           sodipodi:role="line">ansi_chameleon</tspan><tspan
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.01984787px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:Sans;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.09504963"
            id="tspan18110"
            y="549.36725"

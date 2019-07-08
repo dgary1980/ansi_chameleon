@@ -2,7 +2,7 @@
 set -e 
 here=`dirname $0`
 chameleon.py set_configuration_files
-cp ${here}/test.yml ~/.pg_chameleon/configuration/ 
+cp ${here}/test.yml ~/.ansi_chameleon/configuration/ 
 chameleon.py create_replica_schema --config test
 chameleon.py add_source --config test --source mysql
 chameleon.py add_source --config test --source pgsql

@@ -544,7 +544,7 @@ class pgsql_source(object):
 class pg_engine(object):
 	def __init__(self):
 		python_lib=get_python_lib()
-		self.sql_dir = "%s/pg_chameleon/sql/" % python_lib
+		self.sql_dir = "%s/ansi_chameleon/sql/" % python_lib
 		self.sql_upgrade_dir = "%s/upgrade/" % self.sql_dir
 		self.table_ddl={}
 		self.idx_ddl={}
@@ -2759,9 +2759,9 @@ class pg_engine(object):
 			Making simpler to find the replication processes. If the source name is not set then a generic PGCHAMELEON name is used.
 		"""
 		if self.source:
-			app_name = "[pg_chameleon] - source: %s, action: %s" % (self.source, action)
+			app_name = "[ansi_chameleon] - source: %s, action: %s" % (self.source, action)
 		else:
-			app_name = "[pg_chameleon] -  action: %s" % (action) 
+			app_name = "[ansi_chameleon] -  action: %s" % (action) 
 		sql_app_name="""SET application_name=%s; """
 		self.pgsql_cur.execute(sql_app_name, (app_name , ))
 		

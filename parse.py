@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from pg_chameleon import sql_token
+from ansi_chameleon import sql_token
 
 
 #statement="""alter table test_pk drop primary key;"""

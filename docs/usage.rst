@@ -11,7 +11,7 @@ Command line reference
 .. csv-table:: Options 
    :header: "Option", "Description", "Default","Example"
    
-   ``--config``, Specifies the configuration to use in ``~.pg_chameleon/configuration/``. The configuration name should be the file without the extension ``.yml`` , ``default``,``--config foo`` will use the file ``~.pg_chameleon/configuration/foo.yml``
+   ``--config``, Specifies the configuration to use in ``~.ansi_chameleon/configuration/``. The configuration name should be the file without the extension ``.yml`` , ``default``,``--config foo`` will use the file ``~.ansi_chameleon/configuration/foo.yml``
    ``--source``, Specifies the source within a configuration file., N/A, ``--source bar``
    ``--schema``, Specifies a schema configured within a source., N/A, ``--schema schema_foo``
    ``--tables``, Specifies one or more tables configured in a schema. Multiple tables can be specified separated by comma. The table must have the schema., N/A, ``--tables schema_foo.table_bar``
@@ -25,7 +25,7 @@ Command line reference
 .. csv-table:: Command list reference
    :header: "Command", "Description", "Options"
       
-    ``set_configuration_files``, Setup the example configuration files and directories in ``~/.pg_chameleon``
+    ``set_configuration_files``, Setup the example configuration files and directories in ``~/.ansi_chameleon``
     ``show_config``, Displays the configuration  for the configuration, ``--config``
     ``show_sources``, Displays the sourcches configured for the configuration, ``--config``
     ``show_status``,Displays an overview of the status of the sources configured within the configuration. Specifying the source gives more details about that source , ``--config`` ``--source``
@@ -58,12 +58,12 @@ Create a virtualenv and activate it
     source venv/bin/activate
     
     
-Install pg_chameleon
+Install ansi_chameleon
 
 .. code-block:: none
     
     pip install pip --upgrade
-    pip install pg_chameleon
+    pip install ansi_chameleon
 
 Run the ``set_configuration_files`` command in order to create the configuration directory.
 
@@ -72,7 +72,7 @@ Run the ``set_configuration_files`` command in order to create the configuration
     chameleon set_configuration_files
     
     
-cd in ``~/.pg_chameleon/configuration`` and copy the file ``config-example.yml` to ``default.yml``. 
+cd in ``~/.ansi_chameleon/configuration`` and copy the file ``config-example.yml` to ``default.yml``. 
 
     
     
@@ -106,7 +106,7 @@ In PostgreSQL create a user for the replica and a database owned by the user
     CREATE USER usr_replica WITH PASSWORD 'replica';
     CREATE DATABASE db_replica WITH OWNER usr_replica;
 
-Check you can connect to both databases from the machine where pg_chameleon is installed.
+Check you can connect to both databases from the machine where ansi_chameleon is installed.
 
 For MySQL
 

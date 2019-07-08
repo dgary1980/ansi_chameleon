@@ -8,7 +8,7 @@ import signal
 from shutil import copy
 from distutils.sysconfig import get_python_lib
 from tabulate import tabulate
-from pg_chameleon import pg_engine, mysql_source, pgsql_source
+from ansi_chameleon import pg_engine, mysql_source, pgsql_source
 import logging
 from logging.handlers  import TimedRotatingFileHandler
 from daemonize import Daemonize
@@ -72,11 +72,11 @@ class replica_engine(object):
 		self.upgradable_version = '1.7'
 		self.lst_yes= ['yes',  'Yes', 'y', 'Y']
 		python_lib=get_python_lib()
-		cham_dir = "%s/.pg_chameleon" % os.path.expanduser('~')	
+		cham_dir = "%s/.ansi_chameleon" % os.path.expanduser('~')	
 		
 			
 		local_conf = "%s/configuration/" % cham_dir 
-		self.global_conf_example = '%s/pg_chameleon/configuration/config-example.yml' % python_lib
+		self.global_conf_example = '%s/ansi_chameleon/configuration/config-example.yml' % python_lib
 		self.local_conf_example = '%s/config-example.yml' % local_conf
 		
 		local_logs = "%s/logs/" % cham_dir 
@@ -203,7 +203,7 @@ class replica_engine(object):
 		""" 
 			The method loads the configuration from the file specified in the args.config parameter.
 		"""
-		local_confdir = "%s/.pg_chameleon/configuration/" % os.path.expanduser('~')	
+		local_confdir = "%s/.ansi_chameleon/configuration/" % os.path.expanduser('~')	
 		self.config_file = '%s/%s.yml'%(local_confdir, self.args.config)
 		
 		if not os.path.isfile(self.config_file):
