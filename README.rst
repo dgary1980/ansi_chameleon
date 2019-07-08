@@ -1,33 +1,7 @@
-.. image:: https://img.shields.io/github/issues/the4thdoctor/pg_chameleon.svg   
-        :target: https://github.com/the4thdoctor/pg_chameleon/issues
+ansi_chameleon is a MySQL to ANSI SQL replica system written in Python 3 forked from pg_chameleon. 
+The system use the library mysql-replication to pull the row images from MySQL and converts them to ANSI SQL queries to run against any target. 
 
-.. image:: https://img.shields.io/github/forks/the4thdoctor/pg_chameleon.svg   
-        :target: https://github.com/the4thdoctor/pg_chameleon/network
-
-.. image:: https://img.shields.io/github/stars/the4thdoctor/pg_chameleon.svg   
-        :target: https://github.com/the4thdoctor/pg_chameleon/stargazers
-	
-.. image:: https://img.shields.io/badge/license-BSD-blue.svg   
-        :target: https://raw.githubusercontent.com/the4thdoctor/pg_chameleon/master/LICENSE
-	
-.. image:: https://api.travis-ci.org/the4thdoctor/pg_chameleon.svg?branch=ver2.0
-    :target: https://travis-ci.org/the4thdoctor/pg_chameleon
-
-.. image:: https://img.shields.io/pypi/dm/pg_chameleon.svg
-    :target: https://pypi.org/project/pg_chameleon
-
-    
-pg_chameleon is a MySQL to PostgreSQL replica system written in Python 3. 
-The system use the library mysql-replication to pull the row images from MySQL which are stored into PostgreSQL as JSONB. 
-A pl/pgsql function decodes the jsonb values and replays the changes against the PostgreSQL database.
-    
-pg_chameleon  2.0 `is available on pypi <https://pypi.org/project/pg_chameleon/>`_  
-
-The documentation `is available on pgchameleon.org <http://www.pgchameleon.org/documents_v2/index.html>`_ 
-
-Live chat `available on gitter <https://gitter.im/pg_chameleon/Lobby>`_
-
-Please submit your `bug reports on GitHub <https://github.com/the4thdoctor/pg_chameleon>`_.
+Please submit your `bug reports on GitHub <https://github.com/dgary1980/ansi_chameleon>`_.
 
 
 Requirements
@@ -60,7 +34,7 @@ MySQL: 5.5+
 
 Destination database
 ..............................
-PostgreSQL: 9.5+
+Tested against RDS/Aurora: <version>
 
 
 Example scenarios 
@@ -73,8 +47,8 @@ Example scenarios
 Features
 ..............................
 
-* Read from multiple MySQL schemas and  restore them it into a target PostgreSQL  database. The source and target schema names can be different.
-* Setup PostgreSQL to act as a MySQL slave.
+* Read from multiple MySQL schemas and  restore them it into a target database. The source and target schema names can be different.
+* Setup target server to act as a MySQL slave.
 * Support for enumerated and binary data types.
 * Basic DDL Support (CREATE/DROP/ALTER TABLE, DROP PRIMARY KEY/TRUNCATE, RENAME).
 * Discard of rubbish data coming from the replica. 
@@ -113,8 +87,6 @@ Setup
 
 * Create a virtual environment (e.g. python3 -m venv venv)
 * Activate the virtual environment (e.g. source venv/bin/activate)
-* Upgrade pip with **pip install pip --upgrade**
-* Install pg_chameleon with **pip install pg_chameleon**. 
 * Create a user on mysql for the replica (e.g. usr_replica)
 * Grant access to usr on the replicated database (e.g. GRANT ALL ON sakila.* TO 'usr_replica';)
 * Grant RELOAD privilege to the user (e.g. GRANT RELOAD ON \*.\* to 'usr_replica';)
