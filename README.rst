@@ -1,7 +1,7 @@
 VERY MUCH NOT FUNCTIONAL, still deeply in development converting from ph_chameleon to ansi_chameleon, I'll ignore issues made before this is remotely functional
 
 
-ansi_chameleon is a MySQL to ANSI SQL replica system written in Python 3 forked from ansi_chameleon.
+ansi_chameleon is a MySQL to ANSI SQL replica system written in Python 3 forked from pg_chameleon.
 The system use the library mysql-replication to pull the row images from MySQL and converts them to ANSI SQL queries to run against any target.
 
 Please submit your `bug reports on GitHub <https://github.com/dgary1980/ansi_chameleon>`_.
